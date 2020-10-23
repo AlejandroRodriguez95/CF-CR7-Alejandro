@@ -18,3 +18,25 @@
 </div>
 
 <h2 class="text-center text-danger bg-light rounded mt-2 p-3">To pay: EUR {{totalPrice}}</h2>
+
+
+<form [formGroup]="contact" class=" bg-light rounded p-2" (ngSubmit)="submitForm()">
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="firstname">First name</label>
+        <input type="text" class="form-control" id="firstname" placeholder="First name" formControlName="firstname" required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="lastname">Last name</label>
+        <input type="text" class="form-control" id="lastname" placeholder="Last name" formControlName="lastname" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email" required>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Send and pay!</button>
+  </form>

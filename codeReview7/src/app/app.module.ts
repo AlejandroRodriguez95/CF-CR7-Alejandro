@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { LoremComponent } from './lorem/lorem.component';
 import { DestinationDetailsComponent } from './destination-details/destination-details.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +22,13 @@ import { DestinationDetailsComponent } from './destination-details/destination-d
     TravelsComponent,
     ShoppingCartComponent,
     LoremComponent,
-    DestinationDetailsComponent
+    DestinationDetailsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
