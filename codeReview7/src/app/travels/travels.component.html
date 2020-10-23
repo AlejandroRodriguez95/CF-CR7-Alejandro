@@ -1,5 +1,5 @@
 <div class="card-group">
-    <div  *ngFor="let locations of locations"  [routerLink]="['/travels', locations.locationId]" class="card">
+    <div  *ngFor="let locations of locations"  (click)="addToCart(locations)" [routerLink]="['/travels', locations.locationId]" class="card">
         <img class="card-img-top" src="../../assets/img/placeholder.png" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{locations.name}}</h5>

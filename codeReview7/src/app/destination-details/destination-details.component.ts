@@ -9,10 +9,12 @@ import { locations } from '../locations';
 })
 export class DestinationDetailsComponent implements OnInit {
 
-  locations: any;
+  location: any;
   constructor(public route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.location = locations[+params.get('destinationId')];
+      });
   }
-
 }
