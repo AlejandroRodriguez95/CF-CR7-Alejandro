@@ -14,7 +14,6 @@ locations = locations;
 constructor(private route: ActivatedRoute, private cartService: CartService) { }
 
 addToCart(location){
-  window.alert('Your product has been added to the cart!');
   this.cartService.addToCart(location);
 }
 

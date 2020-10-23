@@ -1,7 +1,7 @@
 
     <div *ngIf="location" class="card col-6 mx-auto">
 
-        <h4 class="text-center p-2">This item has been added to your cart!</h4>
+        <h4 class="text-center text-danger p-2">This item has been added to your cart!</h4>
         <img class="card-img-top" src="../../assets/img/placeholder.png" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{location.name}}</h5>
@@ -10,5 +10,7 @@
             <p class="card-text">Starting date: {{location.date}}</p>
             <p class="card-text">Duration: {{location.duration}}</p>
             <p class="card-text"><small class="text-muted"><b>Price: {{location.price}}</b></small></p>
+            <button routerLink="../" class="btn btn-primary">back to the list</button>
+            <button routerLink="../../cart" class="btn btn-warning ml-4">to the cart!</button>
         </div>
     </div>
